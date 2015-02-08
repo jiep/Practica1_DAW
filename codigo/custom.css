@@ -1,0 +1,112 @@
+*{
+  padding: 0px;
+  font-family: 'Trebuchet ms', Arial, sans-serif;
+  color: #7e7e7e;
+  list-style-type: none;
+  size: 0.6em;
+}
+
+body{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0px;
+  background-color: #ffffff;
+}
+
+#no-navigation {
+  background-color: #ffffff;
+  margin-top: -20px;
+}
+
+h2 {
+  border-bottom: 5px;
+  border-width: 3px;
+  border-color: #000000;
+}
+
+#content{
+  margin-left: 3px;
+  margin-right: 3px;
+  background-color: #transparent;
+
+}
+
+#vertical_menu {
+  background-color: #d6d6d6;
+  border-radius: 15px;
+}
+
+#vertical_menu > h3 {
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 5px;
+    border-radius: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+
+#footer {
+   text-align: center;
+}
+
+.col-sm-12{
+   background-image: -webkit-linear-gradient(top, #e8e8e8 0%, #ffffff 100%);
+   background-image: linear-gradient(to bottom, #e8e8e8 0%, #ffffff 100%);
+   background-repeat: repeat-x;
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+   border-radius: 0px;
+   border-color: transparent;
+}
+
+
+.navbar-default {
+   background-image: -webkit-linear-gradient(top, #ffffff 0%, #73FF71 100%);
+   background-image: linear-gradient(to bottom, #ffffff 0%, #73FF71 100%);
+   background-repeat: repeat-x;
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  color: #000000;
+  background-color: #62FF49;
+}
+
+.dropdown:hover {
+  background-color: #62ff49;
+  color: black;
+}
+
+.dropdown-menu > li {
+  border-bottom: 1px solid #6f6f6f;
+  padding-left: 15px;
+  border-color: #8d8d8d;
+  padding: 5px;
+}
+
+.dropdown-menu > li:hover {
+  background-color: #b2b2b2;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: #4cff56;
+}
+
+.content_desc * {
+  padding-bottom: 5px;
+  padding-top: 10px;
+  color: #385ca0;
+}
+
+.content_desc > p {
+  color: #7e7e7e;
+}
