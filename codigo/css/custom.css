@@ -117,6 +117,7 @@ h2 {
 
 #content > .row {
     display: table;
+    margin-left: -1px;
 }
 
 [class*="col-"] {
