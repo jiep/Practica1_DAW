@@ -49,7 +49,7 @@ body {
   background-image: url("img/bg_head_bottom_nav.jpg");
 }
 
-.menus {
+.menu_h {
   padding: 11px;
   border-right: 1px solid #6f6f6f;
   display: inline-block;
@@ -59,7 +59,7 @@ body {
   margin-left: -5px;
 }
 
-.menus:hover {
+.menu_h:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -67,7 +67,7 @@ body {
   margin-left: 0px;
 }
 
-.menuDesp {
+.menu_despl {
   position: absolute;
   left: 0px;
   top: 40px;
@@ -82,14 +82,14 @@ body {
   opacity: 0;
 }
 
-.menuDesp > li {
+.menu_despl > li {
   border-bottom: 1px solid #6f6f6f;
   padding: 5px;
   padding-left: 15px;
   border-color: #8d8d8d;
 }
 
-.menuDesp > li:hover {
+.menu_despl > li:hover {
   background-color: #b2b2b2;
   color: #ffffff;
 }
