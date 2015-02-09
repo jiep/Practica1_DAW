@@ -21,6 +21,137 @@ GIS+MAT: & José Ignacio Escribano Pablos
 
 \section{Página 1: CSS, HTML y jQuery}
 
+\subsection{Organización de los archivos}
+
+Lo primero que hicimos fue crear el archivo \texttt{"index\_css.html"} donde se incluye la página web y el archivo \texttt{"style.css"} donde se encuentran los estilos de los elemento de dicha web.
+
+La estructura inicial del documento \texttt{"index\_css.html"} es la siguiente:
+
+\begin{verbatim}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Result</title>
+
+<link type="text/css" rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+\end{verbatim}
+
+Es decir, una estructura básica del documento html, en donde lo único destacable es que el archivo está enlazado con una hoja de estilos \texttt{"style.css"}.
+
+\subsection{Estructuración del HTML}
+
+Para organizar la página web hacemos uso de la etiqueta \texttt{"<div>"} para definir los bloques de contenido y secciones.
+
+La estructura con los \texttt{"<div>"} hechos sería la siguiente:
+\begin{verbatim}
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div id="header">
+	<div id="logo">
+		<img src="css/img/bg_head_top_logo.jpg">
+		<h1>Metaheuristics Research Projects</h1>
+	</div>
+</div>
+<div id="header_bottom"></div>
+<div id="horizontal_menu">
+	<div id="despl_menu1" class="menu_h">Metaheuristics Overview
+		<ul class="menu_despl">
+	</div>
+	<div id="despl_menu2" class="menu_h">
+		Problems
+	</div>
+	<div id="despl_menu3" class="menu_h">
+		Black-Box Solvers
+	</div>
+	<div id="despl_menu4" class="menu_h">
+		Multi-objective Problems
+	</div>
+</div>
+<div id="breadcrum">
+</div>
+<div id="content">
+	<div id="vertical_menu">
+		<h3>Sections<div id="corner">
+	</div>
+</div>
+<div id="content_right">
+</div>
+<div id="footer">
+		<p>Designed by <emph>José Ignacio Escribano</emph> y <emph>Germán Alonso</emph></p>
+</div>
+</body>
+</html>
+\end{verbatim}
+
+Pero, evidentemente esto no esta bien, para conseguir el objetivo de nuestra página, tenemos que utilizar la hoja de estilos y jugar con las propiedades del CSS.
+
+Para poder realizar nuestro proposito, se han utilizado identificadores en los diferentes \texttt{"<div>"}, como \texttt{"<div id="footer"> o <div id="horizontal\_menu">}, para poder diferenciar cada bloque de la web y poder aplicar los estilos deseados.
+
+
+\subsection{Imagenes y Contenido}
+
+Las imágenes que aparecen en la web, estan dentro de la carpeta \texttt{"img"} y para meterlas dentro de nuestra página hemos usado distintos métodos, según lo necesario para cada una de ellas:
+
+Las imágenes que ocupan todo el ancho de nuestra web, o el ancho que queremos usar, se han metido utilizando la propiedad \texttt{"background-image"}
+
+Hay otras imágenes que son mucho más pequeñas para el tamaño que necesitamos, para ello hemos utilizado la propiedad \texttt{"repeat-y"} para que dicha imagen se repita en el eje y.
+
+Otras imagenes, como la del logo, tienen un contenedor \texttt{"<div>"} para ella sola y en donde se mete la imagen directamente en el HTML, sin tener que estar en las propiedades css como las anteriores. 
+
+Sobre el contenido, simplemente hemos rellenado el documento HTML con la información que viene en la página de ejemplo. 
+
+\subsection{Propiedades CSS}
+
+\subsubsection{propiedades css de los <div>}
+En las etiquetas \texttt{"<div>"}, las propiedades más utilizadas son \texttt{"position, width y height"}.
+
+\texttt{Width y height"} son propiedades que se utilizan para modificar el tamaño de las etiquetas \texttt{"<div>"} y adecuarlo así a las necesidades de la web.
+
+Pero la propiedad más importante es position, con ella conseguimos posicionar los elementos de manera correcta. Los dos valores utilizados en esta práctica son:
+
+\texttt{"Relative:"} con ella, el navegador reserva el espacio que tendría el elemento dentro
+del documento, si todo estuviera por defecto. Es decir, el el "hueco" de la posicón por
+defecto se mantiene aunque el elemento se desplace.
+
+\texttt{"Absolute:"} en este caso, el navegador no reserva espacio, por lo que el elemento sería absoluto respecto a su contenedor.
+
+Además de estas propiedades, se han utilizado otras como \texttt{"background-color, color, text-align, left, right, top o bottom}, que nos facilitan colocar de manera correcta los elementos en cada bloque.
+
+Un ejemplo puede ser el siguiente:
+
+\begin{verbatim}
+#logo > h1{
+  position: relative;
+  top: -40px;
+  right: -70px;
+  z-index: 1;
+  font-size: 1.5em;
+  color: #8f8f8f;
+}
+\end{verbatim}
+
+\subsubsection{propiedades css para decoración}
+
+En este apartado, la web ya está practicamente terminada, solo queda 
+
+\subsection{Menús desplegable con jQuery}
+
 \section{Página 2: CSS, HTML, JS}
 
 \end{document}
