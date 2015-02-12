@@ -61,7 +61,7 @@ h2 {
    margin-right: -5px;
 }
 
-.col-sm-12{
+.col-xs-12{
    background-image: -webkit-linear-gradient(top, #d6d6d6 0%, #ffffff 100%);
    background-image: linear-gradient(to bottom, #d6d6d6 0%, #ffffff 100%);
    background-repeat: repeat-x;
@@ -153,4 +153,12 @@ h2 {
 
 #menu > li:hover {
   border-left: 20px;
+}
+
+#title {
+  font-weight: 700;
+  font-stretch: extra-expanded;
+  padding-bottom: 1px;
+  margin-bottom: 10px;
+  border-bottom: 6px solid #e3e3e3;
 }
