@@ -23,117 +23,49 @@ GIS+MAT: & José Ignacio Escribano Pablos
 
 \subsection{Organización de los archivos}
 
-Lo primero que hicimos fue crear el archivo \texttt{"index\_css.html"} donde se incluye la página web y el archivo \texttt{"style.css"} donde se encuentran los estilos de los elemento de dicha web.
+Lo primero que hicimos fue crear el archivo \texttt{"index\_css.html"} donde se incluye la página web y el archivo \texttt{"style.css"} donde se encuentran los estilos de los elemento de dicha web.\\
 
 La estructura inicial del documento \texttt{"index\_css.html"} es la siguiente:
 
 \begin{verbatim}
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title>Result</title>
-
 <link type="text/css" rel="stylesheet" href="style.css" />
-
 </head>
-
 <body>
-
 </body>
-
 </html>
 \end{verbatim}
 
 Es decir, una estructura básica del documento html, en donde lo único destacable es que el archivo está enlazado con una hoja de estilos \texttt{"style.css"}.
 
-\subsection{Estructuración del HTML}
+\subsection{Aspectos relevantes del HTML}
 
-Para organizar la página web hacemos uso de la etiqueta \texttt{"<div>"} para definir los bloques de contenido y secciones.
+Hemos usado una estructura básica del documento HTML, lo más reelevante es el uso de una hoja de estilos \texttt{"style.css"} y que para organizar la página web hacemos uso de la etiqueta \texttt{"<div>"} para definir los bloques de contenido y secciones.\\
 
-La estructura con los \texttt{"<div>"} hechos sería la siguiente:
+La estructura de los \texttt{"<div>"} hechos sería como la siguiente:
+
 \begin{verbatim}
-<!DOCTYPE html>
-<html>
-<head>
-<link type="text/css" rel="stylesheet" href="css/style.css" />
-</head>
-
-<body>
-<div id="header">
-	<div id="logo">
-		<img src="css/img/bg_head_top_logo.jpg">
-		<h1>Metaheuristics Research Projects</h1>
-	</div>
-</div>
-<div id="header_bottom"></div>
-<div id="horizontal_menu">
-	<div id="despl_menu1" class="menu_h">Metaheuristics Overview
-		<ul class="menu_despl">
-	</div>
-	<div id="despl_menu2" class="menu_h">
-		Problems
-	</div>
-	<div id="despl_menu3" class="menu_h">
-		Black-Box Solvers
-	</div>
-	<div id="despl_menu4" class="menu_h">
-		Multi-objective Problems
-	</div>
-</div>
 <div id="breadcrum">
+	<img src="css/img/bg_bullet_arrow.gif">
+	Home
 </div>
-<div id="content">
-	<div id="vertical_menu">
-		<h3>Sections<div id="corner">
-	</div>
-</div>
-<div id="content_right">
-</div>
-<div id="footer">
-		<p>Designed by <emph>José Ignacio Escribano</emph> y <emph>Germán Alonso</emph></p>
-</div>
-</body>
-</html>
 \end{verbatim}
 
-Pero, evidentemente esto no esta bien, para conseguir el objetivo de nuestra página, tenemos que utilizar la hoja de estilos y jugar con las propiedades del CSS.
-
-Para poder realizar nuestro proposito, se han utilizado identificadores en los diferentes \texttt{"<div>"}, como \texttt{"<div id="footer"> o <div id="horizontal\_menu">}, para poder diferenciar cada bloque de la web y poder aplicar los estilos deseados.
-
-
-\subsection{Imagenes y Contenido}
-
-Las imágenes que aparecen en la web, estan dentro de la carpeta \texttt{"img"} y para meterlas dentro de nuestra página hemos usado distintos métodos, según lo necesario para cada una de ellas:
-
-Las imágenes que ocupan todo el ancho de nuestra web, o el ancho que queremos usar, se han metido utilizando la propiedad \texttt{"background-image"}
-
-Hay otras imágenes que son mucho más pequeñas para el tamaño que necesitamos, para ello hemos utilizado la propiedad \texttt{repeat-y} para que dicha imagen se repita en el eje y.
-
-Otras imágenes, como la del logo, tienen un contenedor \texttt{<div>} para ella sola y en donde se mete la imagen directamente en el HTML, sin tener que estar en las propiedades css como las anteriores. 
-
-Sobre el contenido, simplemente hemos rellenado el documento HTML con la información que viene en la página de ejemplo. 
-
-\subsection{Propiedades CSS}
+\subsection{Aspectos relevantes del CSS}
 
 \subsubsection{Propiedades css de los <div>}
-En las etiquetas \texttt{<div>}, las propiedades más utilizadas son \texttt{position, width y height}.
 
-\texttt{Width y height} son propiedades que se utilizan para modificar el tamaño de las etiquetas \texttt{"<div>"} y adecuarlo así a las necesidades de la web.
+En las etiquetas \texttt{<div>}, las propiedades más utilizadas son \texttt{position, width y height}. Con \texttt{Width y height} hemos modificado el tamaño de las etiquetas \texttt{"<div>"} para adecuarlo así a las necesidades de la web, y con la propiedad \texttt{position} y jugando con sus valores \texttt{Relative} y \texttt{Absolute} conseguimos posicionar los elementos de manera correcta.\\
 
-Pero la propiedad más importante es position, con ella conseguimos posicionar los elementos de manera correcta. Los dos valores utilizados en esta práctica son:
-
-%\texttt{"Relative:"} con ella, el navegador reserva el espacio que tendría el elemento dentro del documento, si todo estuviera por defecto. Es decir, el "hueco" de la posición por defecto se mantiene aunque el elemento se desplace.
-
-\texttt{Absolute:} en este caso, el navegador no reserva espacio, por lo que el elemento sería absoluto respecto a su contenedor.
-
-Además de estas propiedades, se han utilizado otras como \texttt{background-color, color, text-align, left, right, top o bottom}, que nos facilitan colocar de manera correcta los elementos en cada bloque.
+Además de estas propiedades, se han utilizado otras como \texttt{background-color, color, text-align, left, right, top o bottom}, que nos facilitan colocar de manera correcta los elementos en cada bloque.\\
 
 Un ejemplo puede ser el siguiente:
 
 \begin{verbatim}
+
 #logo > h1{
   position: relative;
   top: -40px;
@@ -142,14 +74,52 @@ Un ejemplo puede ser el siguiente:
   font-size: 1.5em;
   color: #8f8f8f;
 }
+
 \end{verbatim}
+
+
 
 \subsubsection{Propiedades css para decoración}
 
-En este apartado, la web ya está prácticamente terminada, solo queda 
+
+
+Para decorar y que la página web tenga un aspecto similar a la pedida, se han utilizado propiedades como \texttt{font-weight, font-stretch ,color, border-color, border-radius, margin-left, margin-right, text-align},
+que nos permiten cambiar el grosor del texto y alinearlo, poner los márgenes necesarios y adaptar los bordes a nuestro gusto, entre otras cosas.
+
+
+\subsection{Imagenes}
+
+
+
+Las imágenes que aparecen en la web, estan dentro de la carpeta \texttt{"img"} y para meterlas dentro de nuestra página hemos usado distintos métodos, según lo necesario para cada una de ellas:\\
+
+
+Las imágenes que ocupan todo el ancho de nuestra web, o el ancho que queremos usar, se han metido utilizando la propiedad \texttt{"background-image"}.\\
+
+
+Hay otras imágenes que son mucho más pequeñas para el tamaño que necesitamos, para ello hemos utilizado la propiedad \texttt{repeat-y} para que dicha imagen se repita en el eje y.\\
+
+
+Otras imágenes, como la del logo, tienen un contenedor \texttt{<div>} para ella sola y en donde se mete la imagen directamente en el HTML, sin tener que estar en las propiedades css como las anteriores. 
+
+
 
 \subsection{Menús desplegable con jQuery}
 
-\section{Página 2: CSS, HTML, JS}
+Para agregar los efectos pedidos (fadein y drop down) en el menú, lo primero que tenemos que hacer es importar los archivos en el HTML.
+
+\begin{verbatim}
+ <script src="js/jquery-2.1.3.min.js"></script>
+ <script src="js/menu.js"></script>
+\end{verbatim}
+ 
+Para realizar el código nos basamos en el método \texttt{animate()}, que nos permite modificar varias propiedades del CSS al mismo tiempo.\\
+
+Gracias a esto, cambiamos los valores \texttt{heigth} y \texttt{opacity} en los eventos de ratón \texttt{mouseenter} y \texttt{mouseleave} para conseguir los efectos deseados.
+
+\section{Página 2: CSS, HTML, JS y BOOTSTRAP}
+
+\subsection{Organización de los archivos}
+En este caso, los archivos creados fueron \texttt{"index\_bootstrap.html"} y \texttt{"custom.css"},
 
 \end{document}
