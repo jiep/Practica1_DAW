@@ -12,7 +12,7 @@ $(function () {
             desp.stop(true, false).animate({
                 height: size,
                 opacity: 1
-            }, 'swing');
+            }, 'normal');
 
         });
 
@@ -20,7 +20,7 @@ $(function () {
             desp.stop(true, false).animate({
                 height: 0,
                 opacity: 0
-            }, 'swing', function () {
+            }, 'normal', function () {
                 desp.css("display", 'none');
             });
         });

@@ -120,6 +120,24 @@ Gracias a esto, cambiamos los valores \texttt{heigth} y \texttt{opacity} en los 
 \section{Página 2: CSS, HTML, JS y BOOTSTRAP}
 
 \subsection{Organización de los archivos}
-En este caso, los archivos creados fueron \texttt{"index\_bootstrap.html"} y \texttt{"custom.css"},
+En este caso, los archivos creados fueron \texttt{"index\_bootstrap.html"} y \texttt{"custom.css"}.
+El HEAD de nuestro archivo queda de la siguiente forma:
+\begin{verbatim}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <title>Metaheuristics Research Projects</title>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/collapse.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+  </head>
+\end{verbatim}
 
+Como se puede observar, el CSS creado por nosotros debe estar aparecer debajo de la de bootstrap para que cuando los estilos entren en conflicto, prevalezca el nuestro.
+
+\subsection{Aspectos relevantes del HTML}
+
+La estructura de \texttt{"index\_bootstrap.html"} es bastante similar al 
 \end{document}
