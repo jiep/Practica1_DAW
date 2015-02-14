@@ -26,7 +26,8 @@ GIS+MAT: & José Ignacio Escribano Pablos
 
 \subsection{Organización de los archivos}
 
-Lo primero que hicimos fue crear el archivo \texttt{index\_css.html} donde se incluye la página web y el archivo \texttt{style.css} donde se encuentran los estilos de los elemento de dicha web.\\
+Lo primero que hicimos fue crear el archivo \texttt{index\_css.html} donde se incluye la página web y 
+el archivo \texttt{style.css} donde se encuentran los estilos de los elemento de dicha web.\\
 
 La estructura inicial del documento \texttt{index\_css.html} es la siguiente:
 
@@ -82,8 +83,7 @@ Un ejemplo puede ser el siguiente:
 
 \subsubsection{Propiedades CSS para decoración}
 
-Para decorar y que la página web tenga un aspecto similar a la pedida, se han utilizado propiedades como \texttt{font-weight}, \texttt{font-stretch} ,\texttt{color}, \texttt{border-color}, \texttt{border-radius}, \texttt{margin-left}, \texttt{margin-right}, \texttt{text-align},
-que nos permiten cambiar el grosor del texto y alinearlo, poner los márgenes necesarios o adaptar los bordes a nuestro gusto para que se parezca lo más posible a la página pedida.
+Para decorar y que la página web tenga un aspecto similar a la pedida, se han utilizado propiedades como \texttt{font-weight, font-stretch, color, border-color, border-radius, margin-left, margin-right o text-align}, que nos permiten cambiar el grosor del texto y alinearlo, poner los márgenes necesarios o adaptar los bordes a nuestro gusto para que se parezca lo más posible a la página pedida.
 
 
 \subsection{Imágenes}
@@ -102,7 +102,7 @@ Las imágenes que aparecen en la web se encuentran todas ellas en la carpeta \te
 
 \subsection{Menús desplegable con jQuery}
 
-Para agregar los efectos pedidos (FadeIn y DropDown) en el menú, lo primero que tenemos que hacer es importar los archivos en el HTML: el primero es el archivo jQuery, necesario para utilizar sus propiedades, y el segundo es el script donde se implementa el comportamiento del menú.
+Para agregar los efectos pedidos (\texttt{FadeIn} y \texttt{DropDown}) en el menú, lo primero que tenemos que hacer es importar los archivos en el HTML: el primero es el archivo \texttt{jQuery}, necesario para utilizar sus propiedades, y el segundo es el script donde se implementa el comportamiento del menú.
 
 \begin{verbatim}
  <script src="js/jquery-2.1.3.min.js"></script>
@@ -117,7 +117,8 @@ Gracias a esto, cambiamos los valores \texttt{heigth} y \texttt{opacity} en los 
 
 \subsection{Organización de los archivos}
 En este caso, los archivos creados fueron \texttt{index\_bootstrap.html} y \texttt{custom.css} que personalizada la página con CSS.
-El \texttt{head} de nuestro archivo queda de la siguiente forma:
+El \texttt{head} de nuestro archivo queda de la siguiente forma:\\
+
 \begin{verbatim}
   <head>
     <meta charset="utf-8">
@@ -133,13 +134,56 @@ El \texttt{head} de nuestro archivo queda de la siguiente forma:
 
 Entre los archivos que necesitamos se encuentra un plugin de Bootstrap, Collapse.js\footnote{http://getbootstrap.com/javascript/\#collapse} que permite que una página se adapte a las páginas de forma responsable escondiendo o mostrando elementos HTML.\\
 
-Como se puede observar, el nuestro CSS debe de estar aparecer debajo del de Bootstrap para sobrescribir los estilos de Bootstrap, y que prevalezcan los nuestros.
+Como se puede observar, nuestro CSS debe de estar debajo del de Bootstrap para sobrescribir los estilos del mismo, y que prevalezcan los nuestros.
 
 \subsection{Aspectos relevantes del HTML}
 
-La estructura de \texttt{index\_bootstrap.html} es bastante similar al 
-\end{document}
+La estructura de \texttt{index\_bootstrap.html} es bastante similar a la del HTML anterior, pero con el añadido de utilizar las clases proporcionadas por Bootstrap para que se apliquen sus estilos.\\
+
+Alguna de estas clases son:  \texttt{containter} y  \texttt{container-fluid}, para definir la anchura de la página (fija o variable),  \texttt{dropdown-menu} y  \texttt{dropdown-toggle} o para el menu desplegable, \texttt{col-sm-2, col-sm-10} y \texttt{col-xs-12} para configurar el ancho de las columnas dentro de una rejilla (clase \texttt{row}).\\
+
+Un ejemplo de como queda es el siguiente:\\
+
+\begin{verbatim}
+<div class="row" id="content">
+   <div class="col-sm-2 hidden-xs" id="vertical_menu">
+     <div id="sections"><h3>Sections</h3>
+     </div>
+     <ul class="nav nav-pills nav-stacked" id="menu">
+       <li><a href="#description">Description</a></li>
+       <li><a href="#members">Members</a></li>
+       <li><a href="#external_reserchers">External Researchers</a></li>
+       <li><a href="#optimization_problems">Optimization Problems</a></li>
+       <li><a href="#black_box_solvers">Black-Box Solvers</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-10" id="content_right">
+    ...
+  </div>
+</div> 
+\end{verbatim}
+
+En donde se puede observar que tenemos una rejilla (\texttt{row}) para el contenido dividida en dos columnas, una para el menú vertical (\texttt{col-sm-2}) y otra para el contenido (\texttt{col-sm-2).
+Además, se usa la clase \texttt{nav nav-pills nav-stacked}, que nos da un elemento de navegación mediante botones y de forma vertical.
+
 
 \subsection{Aspectos relevantes del CSS}
+Como el CSS viene dado por Bootstrap, en nuestra hoja de estilo \texttt{custom.css} nos dedicamos a que la página se parezca lo máximo posible a la web pedida, respetando el diseño responsable.\\
+
+Al igual que en el CSS anterior, las propiedades más utilizadas son \texttt{background, background-color, color, text-align y padding} para organizar los bloques de manera correcta y otras propiedades como \texttt{font-weight, font-stretch, color, border-color, border-radius, margin o text-align} para los últimos retoques.\\
+
+Si hay algo que se pueda destacar es la poca relevancia que tiene ahora la propiedad \texttt{position}, ya que no se necesita debido a que usamos el CSS de Bootstrap y el valor \texttt{inherit}, para poder quitar los efectos del CSS de Bootstrap que se solapan con los de nuestra hoja de estilos.
 
 \subsection{Diseño responsable}
+
+Para construir una web responsable, y que el diseño y zoom funcionen bien en dispositivos móviles y tablets, lo más importante es añadir  \texttt{<meta name="viewport" content="width=device-width", initial-scale="1.0" />} dentro de la cabecera \texttt{<head>}.
+De esta forma, la página será escalable y tendrá un resultado óptimo para visualizarse en cualquier dispositivo.\\
+
+Pero además, para que la navegación en dispositivos con un menor tamaño de pantalla sea más agradable, hay que llegar más allá.\\
+
+En nuestra barra de navegación, hemos añadido la línea \texttt{<div class="collapse navbar-collapse navbar-ex1-collapse">} en el HTML, que agrupa los enlaces de navegación en un menú desplegable.\\
+
+Además, en nuestro menú vertical, le hemos añadido la clase hidden-xs, que hará que desaparezca el menú en dispositivos móviles, pero sea visible tanto en tablets como en ordenadores.
+
+
+\end{document}
