@@ -42,6 +42,9 @@ h2 {
   padding-left: 10px;
   color: #ffffff;
 }
+#menu *:hover{
+    background: inherit; 
+}
 
 .breadcrumb {
     background-color: transparent;
@@ -64,8 +67,8 @@ h2 {
 }
 
 .col-xs-12{
-   background-image: -webkit-linear-gradient(top, #d6d6d6 0%, #ffffff 100%);
-   background-image: linear-gradient(to bottom, #d6d6d6 0%, #ffffff 100%);
+   background-image: -webkit-linear-gradient(top, #ffffff 0%, #d6d6d6 100%);
+   background-image: linear-gradient(to bottom, #ffffff 0%, #d6d6d6 100%);
    background-repeat: repeat-x;
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
    border-radius: 0px;
@@ -76,7 +79,6 @@ h2 {
 .navbar-default {
    background-color: #E0E0E0;
 }
-
 
 
 .dropdown:hover {
@@ -109,6 +111,10 @@ h2 {
 
 .content_desc > p {
   color: #7e7e7e;
+}
+
+.content_desc *:hover{
+    text-decoration: none;
 }
 
 #content > .row {
