@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage[spanish,es-nodecimaldot,es-lcroman,es-tabla,es-noshorthands]{babel}
 \usepackage[left=3cm,right=2cm, bottom=4cm]{geometry}
+\usepackage{subfigure}
+
 \setsansfont[Ligatures=TeX]{texgyreadventor}
 \setmainfont[Ligatures=TeX]{texgyrepagella}
 
@@ -199,7 +201,16 @@ En nuestra barra de navegación, hemos añadido la línea
 \end{verbatim} 
 en el HTML, que agrupa los enlaces de navegación en un menú desplegable.\\
 
-Además, en nuestro menú vertical, le hemos añadido la clase hidden-xs, que hará que desaparezca el menú en dispositivos móviles, pero sea visible tanto en tablets como en ordenadores.
+Además, en nuestro menú vertical, le hemos añadido la clase hidden-xs, que hará que desaparezca el menú en dispositivos móviles, pero sea visible tanto en tablets como en ordenadores.\\
+
+La Figura \ref{fig:responsible} muestra la representación de \texttt{index \_bootstrap.html} en un móvil y en una tablet.
+
+\begin{figure}[htbp]
+\centering
+\subfigure[En un móvil]{\includegraphics[width=65mm]{./imagenes/movil}}
+\subfigure[En una tablet]{\includegraphics[width=65mm]{./imagenes/tablet}}
+\caption{Diseño responsable de \texttt{index\_bootstrap.html}} \label{fig:responsible}
+\end{figure}
 
 
 \end{document}
