@@ -4,7 +4,10 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-nodecimaldot,es-lcroman,es-tabla,es-noshorthands]{babel}
+\usepackage[left=3cm,right=2cm, bottom=4cm]{geometry}
+\setsansfont[Ligatures=TeX]{texgyreadventor}
+\setmainfont[Ligatures=TeX]{texgyrepagella}
 
 \input{portada}
 
@@ -140,7 +143,7 @@ Como se puede observar, nuestro CSS debe de estar debajo del de Bootstrap para s
 
 La estructura de \texttt{index\_bootstrap.html} es bastante similar a la del HTML anterior, pero con el añadido de utilizar las clases proporcionadas por Bootstrap para que se apliquen sus estilos.\\
 
-Alguna de estas clases son:  \texttt{containter} y  \texttt{container-fluid}, para definir la anchura de la página (fija o variable),  \texttt{dropdown-menu} y  \texttt{dropdown-toggle} o para el menu desplegable, \texttt{col-sm-2, col-sm-10} y \texttt{col-xs-12} para configurar el ancho de las columnas dentro de una rejilla (clase \texttt{row}).\\
+Alguna de estas clases son:  \texttt{containter} y  \texttt{container-fluid}, para definir la anchura de la página (fija o variable),  \texttt{dropdown-menu} y  \texttt{dropdown-toggle} o para el menu desplegable, \texttt{col-sm-2}, \texttt{col-sm-10} y \texttt{col-xs-12} para configurar el ancho de las columnas dentro de una rejilla (clase \texttt{row}).\\
 
 Un ejemplo de como queda es el siguiente:\\
 
@@ -163,7 +166,7 @@ Un ejemplo de como queda es el siguiente:\\
 </div> 
 \end{verbatim}
 
-En donde se puede observar que tenemos una rejilla (\texttt{row}) para el contenido dividida en dos columnas, una para el menú vertical (\texttt{col-sm-2}) y otra para el contenido (\texttt{col-sm-2).
+En donde se puede observar que tenemos una rejilla (\texttt{row}) para el contenido dividida en dos columnas, una para el menú vertical (\texttt{col-sm-2}) y otra para el contenido (\texttt{col-sm-2}).
 Además, se usa la clase \texttt{nav nav-pills nav-stacked}, que nos da un elemento de navegación mediante botones y de forma vertical.
 
 
@@ -176,12 +179,18 @@ Si hay algo que se pueda destacar es la poca relevancia que tiene ahora la propi
 
 \subsection{Diseño responsable}
 
-Para construir una web responsable, y que el diseño y zoom funcionen bien en dispositivos móviles y tablets, lo más importante es añadir  \texttt{<meta name="viewport" content="width=device-width", initial-scale="1.0" />} dentro de la cabecera \texttt{<head>}.
+Para construir una web responsable, y que el diseño y zoom funcionen bien en dispositivos móviles y tablets, lo más importante es añadir  \begin{verbatim}
+<meta name="viewport" content="width=device-width", initial-scale="1.0" />
+\end{verbatim} dentro de la cabecera \texttt{<head>}.
 De esta forma, la página será escalable y tendrá un resultado óptimo para visualizarse en cualquier dispositivo.\\
 
 Pero además, para que la navegación en dispositivos con un menor tamaño de pantalla sea más agradable, hay que llegar más allá.\\
 
-En nuestra barra de navegación, hemos añadido la línea \texttt{<div class="collapse navbar-collapse navbar-ex1-collapse">} en el HTML, que agrupa los enlaces de navegación en un menú desplegable.\\
+En nuestra barra de navegación, hemos añadido la línea 
+\begin{verbatim}
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+\end{verbatim} 
+en el HTML, que agrupa los enlaces de navegación en un menú desplegable.\\
 
 Además, en nuestro menú vertical, le hemos añadido la clase hidden-xs, que hará que desaparezca el menú en dispositivos móviles, pero sea visible tanto en tablets como en ordenadores.
 
